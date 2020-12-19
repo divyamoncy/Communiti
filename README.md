@@ -16,3 +16,21 @@ Open lending marketplace for small businesses
 
 4. Click *Submit* to complete the Registration by Borrower
 <img src="Screenshots/screen5.png" alt="screen5" width="200"/>
+
+
+<img src="Screenshots/loanreq.png" alt="loanreq.png" width="200"/>
+
+<img src="Screenshots/loanreq.png" alt="loanreq2.png" width="200"/>
+
+<img src="Screenshots/loanreq.png" alt="loanreq3.png" width="200"/>
+
+<img src="Screenshots/len1.png" alt="len1.png" width="200"/>
+<img src="Screenshots/len2.png" alt="len2.png" width="200"/>
+<img src="Screenshots/len3.png" alt="len3.png" width="200"/>
+<img src="Screenshots/len4.png" alt="len4.png" width="200"/>
+<img src="Screenshots/len5.png" alt="len5.png" width="200"/>
+<img src="Screenshots/len6.png" alt="len6.png" width="200"/>
+
+<img src="Screenshots/viewbid.png" alt="viewbid.png" width="200"/>
+<img src="Screenshots/accepted.png" alt="accepted.png" width="200"/>
+<img src="Screenshots/borrbid.png" alt="borrbid.png" width="200"/>
