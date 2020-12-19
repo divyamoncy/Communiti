@@ -32,9 +32,9 @@ Open lending marketplace for small businesses
 </p>
 6.Accept/Decline bid by Borrower
 <p float="left">
+<img src="Screenshots/borrbid.png" alt="borrbid.png" width="200"/>
 <img src="Screenshots/viewbid.png" alt="viewbid.png" width="200"/>
 <img src="Screenshots/accepted.png" alt="accepted.png" width="200"/>
-<img src="Screenshots/borrbid.png" alt="borrbid.png" width="200"/>
 </p>
 7. Lender Inbox
 <p float="left">
