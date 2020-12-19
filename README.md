@@ -2,6 +2,7 @@
 Open lending marketplace for small businesses
 
 1.Home Page Of the Application 
+
 <img src="Screenshots/screen1.png" alt="screen1" width="200"/>
 
 2.Borrower Registration window(Click _Register as aa business_ in Home Page )
@@ -35,7 +36,9 @@ Open lending marketplace for small businesses
 <img src="Screenshots/accepted.png" alt="accepted.png" width="200"/>
 <img src="Screenshots/borrbid.png" alt="borrbid.png" width="200"/>
 
-7.Bid Status for Lender
+7. Lender Inbox
 
-<img src="lenderbidaccepted.png" alt="lenderbidaccepted.png" width="200"/>
+<img src="Screenshots/lenderbidaccepted.png" alt="lenderbidaccepted.png" width="200"/>
+<img src="Screenshots/lenderinbox.png" alt="lenderinbox.png" width="200"/>
+
 
