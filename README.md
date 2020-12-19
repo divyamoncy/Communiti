@@ -20,9 +20,9 @@ Open lending marketplace for small businesses
 
 <img src="Screenshots/loanreq.png" alt="loanreq.png" width="200"/>
 
-<img src="Screenshots/loanreq.png" alt="loanreq2.png" width="200"/>
+<img src="Screenshots/loanreq2.png" alt="loanreq2.png" width="200"/>
 
-<img src="Screenshots/loanreq.png" alt="loanreq3.png" width="200"/>
+<img src="Screenshots/loanreq3.png" alt="loanreq3.png" width="200"/>
 
 <img src="Screenshots/len1.png" alt="len1.png" width="200"/>
 <img src="Screenshots/len2.png" alt="len2.png" width="200"/>
