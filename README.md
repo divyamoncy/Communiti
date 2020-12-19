@@ -13,11 +13,11 @@ Open lending marketplace for small businesses
 <img src="Screenshots/screen5.png" alt="screen5" width="200"/>
 
 3.Borrower requesting Loan
-
+<p float="left">
 <img src="Screenshots/loanreq.png" alt="loanreq.png" width="200"/>
 <img src="Screenshots/loanreq2.png" alt="loanreq2.png" width="200"/>
 <img src="Screenshots/loanreq3.png" alt="loanreq3.png" width="200"/>
-
+</p>
 4.LenderRegistration
 
 <img src="Screenshots/len1.png" alt="len1.png" width="200"/>
