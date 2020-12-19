@@ -5,12 +5,20 @@ Open lending marketplace for small businesses
 
 <img src="Screenshots/screen1.png" alt="screen1" width="200"/>
 2. Borrower Registration window(Click _Register as aa business_ in Home Page )
-
-<img src="Screenshots/screen2.png" alt="screen2" width="200"/>
-<img src="Screenshots/screen3.png" alt="screen3" width="200"/>
-<img src="Screenshots/screen4.png" alt="screen4" width="200"/>
-<img src="Screenshots/screen5.png" alt="screen5" width="200"/>
-
+<div class="row">
+  <div class="column">
+    <img src="Screenshots/screen2.png" alt="screen2" width="200"/>
+  </div>
+  <div class="column">
+    <img src="Screenshots/screen3.png" alt="screen3" width="200"/>
+  </div>
+  <div class="column">
+    <img src="Screenshots/screen4.png" alt="screen4" width="200"/>
+  </div>
+  <div class="column">
+    <img src="Screenshots/screen5.png" alt="screen5" width="200"/>
+  </div>
+</div>
 3. Borrower requesting Loan
 <img src="Screenshots/loanreq.png" alt="loanreq.png" width="200"/>
 <img src="Screenshots/loanreq2.png" alt="loanreq2.png" width="200"/>
