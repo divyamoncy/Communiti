@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      Bids
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="loaded">
+    <ion-card *ngFor="let bid of myBids">
+      <ion-row>
+        <ion-col size="3">
+          <img src="./../../assets/img/smallbiz.png" id="bidImage">
+        </ion-col>
+        <ion-col size="9">
+          <p><ion-text color="primary"><b>{{bid.businessName}}</b></ion-text><br>
+          <ion-text color="dark">Amount Offered</ion-text>&nbsp; ${{bid.amountOffered}}<br>
+          <ion-text color="dark">Offered Rate</ion-text>&nbsp;  {{bid.offeredRate}}%<br>
+          <ion-text color="dark">Term</ion-text>&nbsp;  {{bid.term}}<br>
+          <ion-text color="dark">Repayment Frequency</ion-text>&nbsp;  {{bid.repaymentFrequency}}<br>
+          <ion-text color="dark">Fees</ion-text>&nbsp; ${{bid.fees}}</p>
+          <ion-badge *ngIf="bid.status=='accepted'" color="success">Accepted</ion-badge>
+          <ion-badge *ngIf="bid.status=='declined'" color="danger">Declined</ion-badge><br>
+          <ion-button color="primary" (click)="modifyBid(bid)">Modify bid<ion-icon slot="end" name="create"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>

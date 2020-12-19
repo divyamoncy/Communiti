@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      <b>Register</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button slot="start" (click)="prev(theSlides)">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button slot="end" (click)="next(theSlides)">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" #theSlides>
+    <ion-slide>
+      <form [formGroup]="slideOneForm">
+          <ion-list lines="full">     
+            <ion-item>
+              <ion-label position="floating">Legal Name</ion-label>
+              <ion-input formControlName="legalName" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Legal ID Type</ion-label>
+              <ion-input formControlName="legalIdType" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Legal ID Number</ion-label>
+              <ion-input formControlName="legalIdNumber" type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+        </form>
+    </ion-slide>
+    <ion-slide>
+      <form [formGroup]="slideTwoForm">
+          <ion-list lines="full">     
+            <ion-item>
+              <ion-label position="floating">Contact Personnel</ion-label>
+              <ion-input formControlName="contactPersonnel" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Job Title</ion-label>
+              <ion-input formControlName="jobTitle" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contact Number</ion-label>
+              <ion-input formControlName="contactNumber" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input formControlName="email" type="email"></ion-input>
+            </ion-item>
+          </ion-list>
+        </form>
+    </ion-slide>
+    
+    <ion-slide>
+      <form [formGroup]="slideThreeForm">
+        <ion-list lines="full"> 
+          <ion-item>
+            <ion-label position="floating">Address</ion-label>
+            <ion-input formControlName="line1" type="text" placeholder="Address line 1"></ion-input>
+            <ion-input formControlName="line2" type="text" placeholder="Address line 2"></ion-input>
+            <ion-input formControlName="line3" type="text" placeholder="Address line 3"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">State</ion-label>
+            <ion-select formControlName="state">
+              <ion-select-option value="AL">Alabama</ion-select-option>
+              <ion-select-option value="AK">Alaska</ion-select-option>
+              <ion-select-option value="AZ">Arizona</ion-select-option>
+              <ion-select-option value="AR">Arkansas</ion-select-option>
+              <ion-select-option value="CA">California</ion-select-option>
+              <ion-select-option value="CO">Colorado</ion-select-option>
+              <ion-select-option value="CT">Connecticut</ion-select-option>
+              <ion-select-option value="DE">Delaware</ion-select-option>
+              <ion-select-option value="DC">District of Columbia</ion-select-option>
+              <ion-select-option value="FL">Florida</ion-select-option>
+              <ion-select-option value="GA">Georgia</ion-select-option>
+              <ion-select-option value="HI">Hawaii</ion-select-option>
+              <ion-select-option value="ID">Idaho</ion-select-option>
+              <ion-select-option value="IL">Illinois</ion-select-option>
+              <ion-select-option value="IN">Indiana</ion-select-option>
+              <ion-select-option value="KS">Kansas</ion-select-option>
+              <ion-select-option value="KY">Kentucky</ion-select-option>
+              <ion-select-option value="LA">Louisiana</ion-select-option>
+              <ion-select-option value="ME">Maine</ion-select-option>
+              <ion-select-option value="MD">Maryland</ion-select-option>
+              <ion-select-option value="MA">Massachusetts</ion-select-option>
+              <ion-select-option value="MI">Michigan</ion-select-option>
+              <ion-select-option value="MN">Minnesota</ion-select-option>
+              <ion-select-option value="MS">Mississippi</ion-select-option>
+              <ion-select-option value="MO">Missouri</ion-select-option>
+              <ion-select-option value="MT">Montana</ion-select-option>
+              <ion-select-option value="NE">Nebraska</ion-select-option>
+              <ion-select-option value="NV">Nevada</ion-select-option>
+              <ion-select-option value="NH">New Hampshire</ion-select-option>
+              <ion-select-option value="NJ">New Jersey</ion-select-option>
+              <ion-select-option value="NM">New Mexico</ion-select-option>
+              <ion-select-option value="NY">New York</ion-select-option>
+              <ion-select-option value="NC">North Carolina</ion-select-option>
+              <ion-select-option value="ND">North Dakota</ion-select-option>
+              <ion-select-option value="OH">Ohio</ion-select-option>
+              <ion-select-option value="OK">Oklahoma</ion-select-option>
+              <ion-select-option value="OR">Oregon</ion-select-option>
+              <ion-select-option value="PA">Pennsylvania</ion-select-option>
+              <ion-select-option value="PR">Puerto Rico</ion-select-option>
+              <ion-select-option value="RI">Rhode Island</ion-select-option>
+              <ion-select-option value="SC">South Carolina</ion-select-option>
+              <ion-select-option value="SD">South Dakota</ion-select-option>
+              <ion-select-option value="TN">Tennessee</ion-select-option>
+              <ion-select-option value="TX">Texas</ion-select-option>
+              <ion-select-option value="UT">Utah</ion-select-option>
+              <ion-select-option value="VT">Vermont</ion-select-option>
+              <ion-select-option value="VA">Virginia</ion-select-option>
+              <ion-select-option value="VI">Virgin Islands</ion-select-option>
+              <ion-select-option value="WA">Washington</ion-select-option>
+              <ion-select-option value="WV">West Virginia</ion-select-option>
+              <ion-select-option value="WI">Wisconsin</ion-select-option>
+              <ion-select-option value="WY">Wyoming</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">ZIP Code</ion-label>
+            <ion-input formControlName="zipCode" type="number"></ion-input>
+          </ion-item> 
+          <ion-item lines="none">
+              <ion-button id="submitButton" size="large" expand="block" (click)="save(theSlides)">
+                Submit
+              </ion-button>
+          </ion-item>
+        </ion-list>
+        <ion-progress-bar *ngIf="submitted" type="indeterminate" #progressBar></ion-progress-bar>
+      </form>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      Inbox
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let bid of bidsForMe">
+    <ion-card *ngIf="bid.status=='submitted'">
+      <ion-row>
+        <ion-col size="3">
+          <img src="./../../assets/img/bankbid.jpg" id="bidImage">
+        </ion-col>
+        <ion-col size="9">
+          <p><ion-text color="primary"><b>{{bid.lenderName}}</b></ion-text> has made a bid!<br>
+          <ion-text color="dark">Requested Amount</ion-text>&nbsp; ${{bid.requestAmount}}<br>
+          <ion-text color="dark">Amount Offered</ion-text>&nbsp; ${{bid.amountOffered}}<br>
+          <ion-text color="dark">Offered Rate</ion-text>&nbsp;  {{bid.offeredRate}}%<br>
+          <ion-text color="dark">Term</ion-text>&nbsp;  {{bid.term}}<br>
+          <ion-text color="dark">Repayment Frequency</ion-text>&nbsp;  {{bid.repaymentFrequency}}<br>
+          <ion-text color="dark">Fees</ion-text>&nbsp; ${{bid.fees}}</p>
+          <ion-button *ngIf="bid.status=='submitted'" size="small" color="success" (click)="accept(bid)">Accept<ion-icon slot="end" name="checkmark"></ion-icon></ion-button> 
+          <ion-button *ngIf="bid.status=='submitted'" size="small" color="danger" (click)="decline(bid)">Decline<ion-icon slot="end" name="close"></ion-icon></ion-button>
+          <ion-button color="primary" size="small" (click)="view(bid)">View Bid</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      <b>View Bid</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button slot="start" href="/tabs/tab2">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="bidDetails">
+  <p><ion-text color="dark">Bid made by &nbsp;<b>{{bid.lenderName}}</b></ion-text></p>
+  <p><ion-text color="primary">Request Amount</ion-text>&nbsp;  ${{bid.requestAmount}}</p>
+  <p><ion-text color="primary">Offered Amount</ion-text>&nbsp;  ${{bid.amountOffered}}</p>
+  <p><ion-text color="primary">Rate Offered</ion-text>&nbsp;  {{bid.offeredRate}}%</p>
+  <p><ion-text color="primary">Term</ion-text>&nbsp;  {{bid.term}} months</p>
+  <p><ion-text color="primary">Repayment Frequency</ion-text>&nbsp;  {{bid.repaymentFrequency}}</p>
+  <p><ion-text color="primary">Fee Description</ion-text>&nbsp;  {{bid.feesDescription}}</p>
+  <p><ion-text color="primary">Fees</ion-text>&nbsp;  {{bid.fees}}</p>
+  <p><ion-text color="primary">Possible Disbursement Date</ion-text>&nbsp;  {{bid.possibleDisbursementDate}}</p>
+  <ion-badge *ngIf="bid.status=='accepted'" color="success">Accepted</ion-badge>
+  <ion-badge *ngIf="bid.status=='declined'" color="danger">Declined</ion-badge>
+  <ion-button *ngIf="bid.status=='submitted'" size="small" color="success" (click)="accept(bid)">Accept<ion-icon slot="end" name="checkmark"></ion-icon></ion-button> 
+  <ion-button *ngIf="bid.status=='submitted'" size="small" color="danger" (click)="decline(bid)">Decline<ion-icon slot="end" name="close"></ion-icon></ion-button>
+  </div>
+  
+</ion-content>
+

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="loaded">
+    <ion-card>
+      <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4>
+          <img src="./../../assets/img/bank.png" id="bankImage" />
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+      <ion-list id="profileDetails">
+        <ion-item>
+          <ion-text color="primary"><b>Legal Name</b></ion-text>&nbsp;  {{lender.legalName}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Legal ID Type</b></ion-text>&nbsp;  {{lender.legalIdType}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Legal ID Number</b></ion-text>&nbsp;  {{lender.legalIdNumber}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Contact Personnel</b></ion-text>&nbsp;  {{lender.contactPersonnel}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Contact Number</b></ion-text>&nbsp;  {{lender.contactNumber}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Email</b></ion-text>&nbsp;  {{lender.email}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>State</b></ion-text>&nbsp;  {{lender.state}} 
+        </ion-item>
+        <ion-item>
+          <ion-text color="primary"><b>Zip Code</b></ion-text>&nbsp;  {{lender.zipCode}} 
+        </ion-item>
+    </ion-list>
+    </ion-card>
+    </div>
+  
+</ion-content>

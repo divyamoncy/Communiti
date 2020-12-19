@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      Loans
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="allLoans">
+    <ion-list>
+      <ion-item *ngFor="let loan of allLoans">
+        <ion-avatar slot="end" class="loanImage">
+          <img src="./../../assets/img/smallbiz.png">
+        </ion-avatar>
+        <ion-label>
+          <p><ion-text color="dark"><b>{{loan.businessName}}</b></ion-text></p>
+          <ion-label text-wrap class="ion-text-wrap">
+          <ion-chip *ngIf="loan.lgbtqOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/pride.svg">
+            </ion-avatar>
+            <ion-label>LGBTQ+ Owned</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="loan.nativeAmericanOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/native-american.svg">
+            </ion-avatar>
+            <ion-label>Native American Owned</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="loan.latinAmericanOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/south-america.svg">
+            </ion-avatar>
+            <ion-label>Latin American Owned</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="loan.africanAmericanOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/heart.svg">
+            </ion-avatar>
+            <ion-label>African American Owned</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="loan.veteranOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/veteran.svg">
+            </ion-avatar>
+            <ion-label>Veteran Owned</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="loan.womenOwned" outline color="primary">
+            <ion-avatar>
+              <img src="./../../assets/icon/woman.svg">
+            </ion-avatar>
+            <ion-label>Woman Owned</ion-label>
+          </ion-chip>
+        </ion-label>
+          
+          <p><ion-text color="primary">Loan Request Amount</ion-text>&nbsp;  ${{loan.requestAmount}}</p>
+          <p><ion-text color="primary">Loan Purpose</ion-text>&nbsp;  {{loan.loanPurpose}}</p>
+          <p><ion-text color="primary">Current Employees</ion-text>&nbsp;  {{loan.currentEmployees}}</p>
+          <p><ion-text color="primary">New Jobs</ion-text>&nbsp;  {{loan.newJob}}</p>
+          <p><ion-text color="primary">Old Jobs</ion-text>&nbsp;  {{loan.oldJob}}</p>
+          <ion-label *ngFor="let bid of allBids" >
+            <p *ngIf="bid.loanId==loan.loanId" class="bidClass">
+                <b *ngIf="bid.lenderId!=lender.lenderId">{{bid.lenderName}}</b> 
+                <b *ngIf="bid.lenderId==lender.lenderId">You</b> bid <b>${{bid.amountOffered}}</b> at <b>{{bid.offeredRate}}%</b> for <b>{{bid.term}}</b> months.<br>
+            </p> 
+          </ion-label>
+          <ion-button color="primary" (click)="goToBid(loan)">Make a bid</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+   
+  </div>
+  
+</ion-content>

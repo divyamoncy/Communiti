@@ -1,0 +1,7 @@
+{
+  "name": "community-sample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

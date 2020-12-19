@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      <b>Profile</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="loaded">
+  <ion-card>
+    <img src="./../../assets/img/profilebusiness.png" />
+    <ion-list id="profileDetails">
+      <ion-item>
+        <ion-text color="primary"><b>Business Name</b></ion-text>&nbsp;  {{borrower.businessName}} 
+        <!-- <ion-avatar *ngIf="borrower.africanAmericanOwned">
+          <img src="./../../assets/icon/veteran.svg">
+        </ion-avatar> -->
+      </ion-item>
+      <ion-item>
+        <ion-text color="primary"><b>Business Registration Number</b></ion-text>&nbsp;  {{borrower.businessRegNo}}
+      </ion-item>
+      <ion-item>
+        <ion-text color="primary"><b>Annual Revenue</b></ion-text>&nbsp;  ${{borrower.annualRevenue}}
+      </ion-item>
+      <ion-item>
+        <ion-text color="primary"><b>Owner's Name</b></ion-text>&nbsp;  {{borrower.ownerName}}
+      </ion-item>
+      <ion-item>
+        <ion-text color="primary"><b>Email</b></ion-text>&nbsp;  {{borrower.emailAddress}}
+      </ion-item>
+      <ion-item lines="none">
+        <ion-text color="primary"><b>Phone Number</b></ion-text>&nbsp;  {{borrower.phoneNumber}}
+      </ion-item>
+  </ion-list>
+  </ion-card>
+  </div>
+</ion-content>

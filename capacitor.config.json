@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "community-sample",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/community",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      <b>Create a Loan Request</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button slot="start" href="/home">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="slideOneForm">
+    <ion-list lines="full">     
+      <ion-item>
+        <ion-label position="floating">Loan Amount Needed</ion-label>
+        <ion-input formControlName="requestAmount" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Loan Purpose</ion-label>
+        <ion-select formControlName="loanPurpose" >
+          <ion-select-option value="Equipment Purchase">Equipment Purchase</ion-select-option>
+          <ion-select-option value="Expansion">Expansion</ion-select-option>
+          <ion-select-option value="Remodel location">Remodel Location</ion-select-option>
+          <ion-select-option value="Refinance debt">Refinance debt</ion-select-option>
+          <ion-select-option value="Start a business">Start a business</ion-select-option>
+          <ion-select-option value="Buy a business/franchise">Buy a business/franchise</ion-select-option>
+          <ion-select-option value="Marketing">Marketing</ion-select-option>
+          <ion-select-option value="Inventory">Inventory</ion-select-option>
+          <ion-select-option value="Other">Other</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Current Number of Employees</ion-label>
+        <ion-input formControlName="currentEmployees" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">New jobs that can be created</ion-label>
+        <ion-input formControlName="newJob" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Number of old jobs that can be retained</ion-label>
+        <ion-input formControlName="oldJob" type="number"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-button id="submitButton" size="large" expand="block" (click)="createLoanRequest()">
+          Create Loan Request
+        </ion-button>
+    </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

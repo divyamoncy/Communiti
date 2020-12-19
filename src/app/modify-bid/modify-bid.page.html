@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      <b>Modify Bid</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button slot="start" href="/lenderdashboard">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p><ion-text color="dark"><b>{{bid.businessName}}</b></ion-text></p>
+  <p><ion-text color="primary">Bid Request Amount</ion-text>&nbsp;  {{bid.requestAmount}}</p>
+  <p><ion-text color="primary">Business Category</ion-text>&nbsp;  {{bid.businessCategory}}</p>
+  <form [formGroup]="slideOneForm">
+    <ion-list lines="full">     
+      <ion-item>
+        <ion-label position="floating">Amount Offered</ion-label>
+        <ion-input formControlName="amountOffered" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Term(in months)</ion-label>
+        <ion-input formControlName="term" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Interest Rate</ion-label>
+        <ion-input formControlName="offeredRate" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Repayment Frequency</ion-label>
+        <ion-select formControlName="repaymentFrequency" >
+          <ion-select-option value="yearly">Yearly</ion-select-option>
+          <ion-select-option value="monthly">Monthly</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fees Description</ion-label>
+        <ion-input formControlName="feesDescription" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fees</ion-label>
+        <ion-input formControlName="fees" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" id="dateinput" >Possible Disbursement Date</ion-label>
+        <ion-input id="dateField" formControlName="possibleDisbursementDate" type="date"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-button id="submitButton" size="large" expand="block" (click)="modifyBid()">
+          Modify Bid
+        </ion-button>
+    </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+

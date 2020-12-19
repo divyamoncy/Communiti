@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">
+      Loan Requests
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="loaded">
+      <ion-card *ngFor="let loan of myLoans">
+        <ion-row>
+          <ion-col size="4">
+            <img src="./../../assets/img/loan.png">
+          </ion-col>
+          <ion-col size="8">
+            <p>
+              <ion-text color="primary">Loan Request Amount</ion-text>&nbsp;  {{loan.requestAmount}}<br>
+              <ion-text color="primary">Loan Purpose</ion-text>&nbsp;  {{loan.loanPurpose}}<br>
+              <ion-text color="primary">Current Employees</ion-text>&nbsp;  {{loan.currentEmployees}}<br>
+              <ion-text color="primary">New Jobs</ion-text>&nbsp;  {{loan.newJob}}<br>
+              <ion-text color="primary">Old Jobs</ion-text>&nbsp;  {{loan.oldJob}}
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item *ngFor="let bid of bidsOnMyLoans" >
+              <p *ngIf="bid.loanId==loan.loanId" class="bidClass">
+                  <b>{{bid.lenderName}}</b> bid <b>${{bid.amountOffered}}</b> at <b>{{bid.offeredRate}}%</b> for <b>{{bid.term}}</b> months.<br>
+                  <ion-badge *ngIf="bid.status=='accepted'" color="success">Accepted</ion-badge>
+                  <ion-badge *ngIf="bid.status=='declined'" color="danger">Declined</ion-badge><br>
+                  <ion-button *ngIf="bid.status=='submitted'" size="small" color="success" (click)="accept(bid)">Accept<ion-icon slot="end" name="checkmark"></ion-icon></ion-button> 
+                  <ion-button *ngIf="bid.status=='submitted'" size="small" color="danger" (click)="decline(bid)">Decline<ion-icon slot="end" name="close"></ion-icon></ion-button>
+                  <ion-button color="primary" size="small" (click)="view(bid)">View Bid</ion-button>
+              </p> 
+            </ion-item>
+          </ion-list>
+          </ion-col>
+        </ion-row>
+       </ion-card>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button href="/loanrequest">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
