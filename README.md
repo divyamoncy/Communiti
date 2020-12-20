@@ -18,7 +18,7 @@ Open lending marketplace for small businesses
 <img src="Screenshots/loanreq2.png" alt="loanreq2.png" width="200"/>
 <img src="Screenshots/loanreq3.png" alt="loanreq3.png" width="200"/>
 </p>
-4.Lender Registration
+4.Lender Registration(Entering General Information)
 <p float="left">
 <img src="Screenshots/len1.png" alt="len1.png" width="200"/>
 <img src="Screenshots/len2.png" alt="len2.png" width="200"/>
